@@ -8,7 +8,6 @@ def setup():
     #og konverteres til en liste:
     data = list(reader)
 
-    cmd = ""
 
 def getBobs():
     totalBombs = 0
@@ -28,12 +27,13 @@ def getBobs():
 
         # # Nu kan gennemsnittet udregnes:
         # return totalBombs/numberOfMissions
+cmd = ""
 
-    while not cmd.startswith('q'):
-        cmd = input('Skriv en kommando > ')
+while not cmd.startswith('q'):
+    cmd = input('Skriv en kommando > ')
 
-        if cmd.startswith('header'):
-            print(reader.fieldnames)
+    if cmd == 'header':
+        print(reader.fieldnames)
 
-        if cmd.startswith('avg Bombs'):
-            print(getBobs())
+    if cmd == 'avg Bombs':
+        print(getBobs())
