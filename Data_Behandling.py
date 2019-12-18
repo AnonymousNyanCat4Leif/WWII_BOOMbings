@@ -1,12 +1,11 @@
 import csv
 import math
 
-def setup():
-    infile = open('operations.csv', mode='r')
-    #CSV-data læses
-    reader = csv.DictReader(infile)
-    #og konverteres til en liste:
-    data = list(reader)
+infile = open('operations.csv', mode='r')
+#CSV-data læses
+reader = csv.DictReader(infile)
+#og konverteres til en liste:
+data = list(reader)
 
 
 def getBobs():
